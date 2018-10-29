@@ -10,7 +10,14 @@
   margin-left: -270px;
     margin-top: 20px;
     width: 120px;
+    color:#fff;
+    background-color:#d7711b;
 }
+.ena_dis:hover
+{
+  color:#fff;
+}
+
 label
 { 
   margin: 0; 
