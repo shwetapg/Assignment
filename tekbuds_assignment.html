@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  	.column1, .column2, .column3{
+  		float:left;
+  		width:33.33%;
+  	}
+  </style>
+</head>
+<body>
+	
+	<div class="container">
+		<button id="disp" style="margin-top:3%;">Submit</button><br/>
+		<div id="test"></div><br/>
+
+		<!-- using css dividing screen by width 100% divided by 3 its 33.333%-->
+		<div class="row">
+			<div class="column1">column1</div>
+			<div class="column2" id="column2">column2</div>
+			<div class="column3">column3</div>
+		</div><br/>
+
+		<!--Using bootstrap grid-->
+		<div class="row">
+			<div class="col-sm-3">bootstrap column1</div>
+			<div class="col-sm-3">bootstrap column2</div>
+			<div class="col-sm-3">bootstrap column3</div>
+			<div class="col-sm-3">bootstrap column4</div>
+		</div>
+	</div>	
+
+	<!--javascript to displaying users in middle column of divided screen by css-->
+	<script>
+	var users, text, uLen, i;
+	users = ["Shweta", "Pushpa", "Sourabh", "Laxmi","Suresh"];
+	uLen = users.length;
+
+	text = "<ul style='list-style-type:none;'>";
+	for (i = 0; i < uLen; i++) {
+	  text += "<li>" + users[i] + "</li>";
+	}
+	text += "</ul>";
+
+	document.getElementById("column2").innerHTML = text;
+	</script>
+
+	<!--Displaying Hello world by clicking button-->
+	</script>
+	<script>
+	$(document).ready(function(){
+	  $("#disp").click(function() { 
+
+	$("#test").text("Hello World");
+	console.log("Hello World")
+	  });
+	});
+	</script>
+
+</body>
+</html>
